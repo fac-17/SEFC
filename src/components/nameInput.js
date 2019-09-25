@@ -8,7 +8,10 @@ const NameInput = () => {
     <input
       type="text"
       value={name}
-      onChange={event => setName(event.target.value)}
+      onChange={event => {
+        setName(event.target.value);
+        console.log(name);
+      }}
     />
   );
 };
