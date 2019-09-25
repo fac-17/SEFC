@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import { NameInput } from "./components/nameInput";
+import { TruthOrDare } from "./components/TruthOrDare";
 
 function App() {
   return (
@@ -11,7 +12,9 @@ function App() {
         <p>Enter the players names below</p>
         {<NameInput />}
       </section>
-      <section className="checkbox">{/* <TruthOrDare /> */}</section>
+      <section className="checkbox">
+        <TruthOrDare />
+      </section>
       <section className="sentenceOutput">{/* <SentenceOutput /> */}</section>
       <section className="nameOutput">{/* <NameOutput /> */}</section>
       <section className="nextButton">{/* <NextButton */}</section>
