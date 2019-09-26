@@ -13,8 +13,15 @@ const SentenceOutput = selection => {
   React.useEffect(() => {
     FetchData(queryUrl, selection).then(data => {
       const dataRecord = data.records;
-      const tempCategory = dataRecord.forEach(data => {
+
+      const tempCategory = dataRecord.filter(data => {
+        // return data.fields.category === selection;
         console.log(data.fields.Category);
+        console.log(selection.selection)
+        console.log(data.fields.Category === selection.selection)
+      // const filter = tempCategory.filter(cat => cat ? 'truth' : 'dare')
+      // console.log(filter)
+
       });
     });
   });
