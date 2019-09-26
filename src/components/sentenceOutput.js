@@ -27,12 +27,13 @@ const SentenceOutput = selection => {
         const randomIndex = Math.floor(Math.random() * sentenceArray.length);
         const randomElement = sentenceArray[randomIndex];
         console.log("randomQuestion", randomElement);
+        setSentence(randomElement);
       };
 
       dataRecord.filter(filterIfMatch);
       findRandomQuestion();
     });
-  });
+  }, []);
 
   return (
     <div>
