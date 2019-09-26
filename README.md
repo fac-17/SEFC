@@ -18,8 +18,13 @@ We used an Airtable to create our API. We started by inputting a list of Truth a
 
 API Database is availiable at: https://airtable.com/shrqsPguklwM2BHsy
 
+## Components
 
-
+Components were created for:
+1. Player name input
+2. Truth or Dare radio buttons
+3. Randomly generated player name output
+4. Randomly generated truth or dare based upon each player's selection 
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
