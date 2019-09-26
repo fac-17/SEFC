@@ -11,6 +11,7 @@ const SentenceOutput = selection => {
 
   const handleButtonClick = () => {
     setNextButtonClicked(prevCount => prevCount + 1);
+    console.log(nextButtonClicked);
   };
 
   // send in selected category and then show a random sentence
@@ -38,23 +39,25 @@ const SentenceOutput = selection => {
       dataRecord.filter(filterIfMatch);
       findRandomQuestion();
     });
-  }, []);
+  }, [nextButtonClicked]);
 
   // show next question upon next button click
 
-  React.useEffect(() => {
-    const nextButton = document.getElementsByClassName("nextButton");
-    console.log("nextButton", nextButton);
-    if (nextButton) {
-      nextButton.addEventListener("click", console.log("worked"));
-    }
-    // return () => window.removeEventListener("click", handleButtonClick);
-  }, []);
+  //   React.useEffect(() => {
+  //     const nextButton = document.getElementsByClassName("nextButton");
+  //     console.log("nextButton", nextButton);
+  //     if (nextButton) {
+  //       nextButton.addEventListener("click", console.log("worked"));
+  //     }
+  //     // return () => window.removeEventListener("click", handleButtonClick);
+  //   }, []);
 
   return (
     <div>
       <p>{sentence}</p>
-      <button className="nextButton">Next</button>
+      <button onClick={handleButtonClick} className="nextButton">
+        Next
+      </button>
     </div>
   );
 };
