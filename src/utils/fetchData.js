@@ -1,5 +1,5 @@
 // This is where we do the API Call
-const fetchData = () => {
+const FetchData = () => {
   const airtableToken = process.env.REACT_APP_AIRTABLE_API_KEY;
   const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
   const queryUrl = `https://api.airtable.com/v0/${airtableBase}/Table%201?api_key=${airtableToken}`;
@@ -9,6 +9,7 @@ const fetchData = () => {
       console.log(`Error with the request! ${response.status}`);
       return;
     }
+    console.log(response.json);
     return response.json();
   };
 
@@ -19,4 +20,4 @@ const fetchData = () => {
     });
 };
 
-export { fetchData };
+export { FetchData };

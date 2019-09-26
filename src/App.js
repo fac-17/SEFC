@@ -3,6 +3,8 @@ import "./App.css";
 import { NameInput } from "./components/nameInput";
 import { NameOutput } from "./components/nameOutput";
 import { TruthOrDare } from "./components/TruthOrDare";
+import { FetchData } from "./utils/fetchData";
+import { SentenceOutput } from "./components/sentenceOutput";
 
 function App() {
   const [name, setName] = React.useState("");
@@ -27,7 +29,7 @@ function App() {
             {<NameOutput name={name} />}
           </section>
           <section className="sentenceOutput">
-            {/* <SentenceOutput /> */}
+            <SentenceOutput />
           </section>
           <section className="nextButton">{/* <NextButton */}</section>
         </div>
