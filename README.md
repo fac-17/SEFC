@@ -36,9 +36,6 @@ Figma was used to create our design:
 https://www.figma.com/file/1uaCooxAOh8rb0ZukqzijD/Untitled?node-id=0%3A1
 
 
-## Testing
-
-<iframe src="https://giphy.com/embed/EPu9nvZhhoc2JJ7yPT" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
