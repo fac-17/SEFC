@@ -1,3 +1,11 @@
+The Flamboyant Bottle
+
+
+The game app takes inspiration from the Truth or Dare game. Users are able to input the name of all players (seperated by a comma) and then select a truth or dare from the options before a random Truth or Dare is generated.
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
