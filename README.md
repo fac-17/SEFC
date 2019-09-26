@@ -1,7 +1,23 @@
-The Flamboyant Bottle
+
+# The Flamboyant Bottle
+
+Project Team:
+
+[Christine](https://github.com/xIrusux)
+[Sara](https://github.com/sarahyjja)
+[Emmanuel](https://github.com/emaggy)
+[Fran](https://github.com/frannyfra)
 
 
-The game app takes inspiration from the Truth or Dare game. Users are able to input the name of all players (seperated by a comma) and then select a truth or dare from the options before a random Truth or Dare is generated.
+The game app takes inspiration from the infamous Truth or Dare game. Users are able to input the name of all players (seperated by a comma) and then select a truth or dare from the options before a random Truth or Dare is generated.
+
+
+## API
+
+We used an Airtable to create our API. We started by inputting a list of Truth and Dares in our database.
+
+API Database is availiable at: https://airtable.com/shrqsPguklwM2BHsy
+
 
 
 
