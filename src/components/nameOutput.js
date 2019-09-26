@@ -10,8 +10,10 @@ const randomElement = oneName[randomIndex];
 console.log(randomElement)
 
   return (
-
+<div>
 <h1>{randomElement}</h1>
+<button className="shake">Shake me!</button>
+</div>
   )
 }
 export { NameOutput };
