@@ -3,16 +3,28 @@
 import React from "react";
 
 const NameInput = ({name, setName}) => {
+  const [tempName, setTempName] = React.useState("");
   return (
+    <form className="nameInput"
+    onSubmit = {(event) => {
+      event.preventDefault();
+      setName(tempName);
+      console.log(tempName)
+    }}
+    >
+
     <input
       type="text"
-      value={name}
+      value={tempName}
       onChange={event => {
-        setName(event.target.value);
+        setTempName(event.target.value);
 
-        console.log(name);
+        console.log(tempName);
       }}
     />
+
+    <button className="nameInputSubmit" type="Submit">Submit</button>
+    </form>
   );
 };
 
