@@ -4,8 +4,11 @@
 Project Team:
 
 [Christine](https://github.com/xIrusux)
+
 [Sara](https://github.com/sarahyjja)
+
 [Emmanuel](https://github.com/emaggy)
+
 [Fran](https://github.com/frannyfra)
 
 
