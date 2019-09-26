@@ -33,9 +33,12 @@ Components were created for:
 
 ## Design
 Figma was used to create our design:
+https://www.figma.com/file/1uaCooxAOh8rb0ZukqzijD/Untitled?node-id=0%3A1
 
-<iframe style="border: none;" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F1uaCooxAOh8rb0ZukqzijD%2FUntitled%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
 
+## Testing
+
+<iframe src="https://giphy.com/embed/EPu9nvZhhoc2JJ7yPT" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
