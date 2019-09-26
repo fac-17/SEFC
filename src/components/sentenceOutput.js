@@ -39,7 +39,7 @@ const SentenceOutput = selection => {
       dataRecord.filter(filterIfMatch);
       findRandomQuestion();
     });
-  }, [nextButtonClicked]);
+  }, [nextButtonClicked || selection]);
 
   // show next question upon next button click
 
