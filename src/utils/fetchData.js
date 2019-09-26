@@ -12,7 +12,6 @@ const checkResponse = response => {
 
 const FetchData = (queryUrl, category) => {
   const newCategory = category.selection;
-  console.log(newCategory);
   return fetch(queryUrl)
     .then(checkResponse)
     .catch(err => {
