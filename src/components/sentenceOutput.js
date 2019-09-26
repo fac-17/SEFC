@@ -4,9 +4,14 @@ import { FetchData } from "../utils/fetchData";
 
 const SentenceOutput = selection => {
   const [sentence, setSentence] = React.useState("");
+  const [nextButtonClicked, setNextButtonClicked] = React.useState(0);
   const airtableToken = process.env.REACT_APP_AIRTABLE_API_KEY;
   const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
   const queryUrl = `https://api.airtable.com/v0/${airtableBase}/Table%201?api_key=${airtableToken}`;
+
+  const handleButtonClick = () => {
+    setNextButtonClicked(prevCount => prevCount + 1);
+  };
 
   // send in selected category and then show a random sentence
 
@@ -35,9 +40,21 @@ const SentenceOutput = selection => {
     });
   }, []);
 
+  // show next question upon next button click
+
+  React.useEffect(() => {
+    const nextButton = document.getElementsByClassName("nextButton");
+    console.log("nextButton", nextButton);
+    if (nextButton) {
+      nextButton.addEventListener("click", console.log("worked"));
+    }
+    // return () => window.removeEventListener("click", handleButtonClick);
+  }, []);
+
   return (
     <div>
       <p>{sentence}</p>
+      <button className="nextButton">Next</button>
     </div>
   );
 };
