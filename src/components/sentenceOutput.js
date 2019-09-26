@@ -14,15 +14,22 @@ const SentenceOutput = selection => {
     FetchData(queryUrl, selection).then(data => {
       const dataRecord = data.records;
 
-      const tempCategory = dataRecord.filter(data => {
-        // return data.fields.category === selection;
-        console.log(data.fields.Category);
-        console.log(selection.selection)
-        console.log(data.fields.Category === selection.selection)
+      const filterIfMatch = data => {
+        console.log("inside filterIF match");
+        const apiCat = data.fields.Question;
+        if (data.fields.Category === selection.selection) {
+          console.log(apiCat);
+          return apiCat;
+        }
+      };
+      const tempCategory = dataRecord.filter(filterIfMatch);
+      // return data.fields.category === selection;
+      //   console.log(data.fields);
+      //   console.log(data.fields.Category);
+      //   console.log(selection.selection);
+      //   console.log(data.fields.Category === selection.selection);
       // const filter = tempCategory.filter(cat => cat ? 'truth' : 'dare')
       // console.log(filter)
-
-      });
     });
   });
 
