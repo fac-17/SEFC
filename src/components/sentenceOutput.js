@@ -2,15 +2,16 @@ import React from "react";
 import { FetchData } from "../utils/fetchData";
 // output the sentence from the airtable database
 
-const SentenceOutput = () => {
+const SentenceOutput = selection => {
   const [sentence, setSentence] = React.useState("");
-  const [category, setCategory] = React.useState("");
   const airtableToken = process.env.REACT_APP_AIRTABLE_API_KEY;
   const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
   const queryUrl = `https://api.airtable.com/v0/${airtableBase}/Table%201?api_key=${airtableToken}`;
 
+  // send in selected category and then show a random sentence
+
   React.useEffect(() => {
-    FetchData(queryUrl).then(data => {
+    FetchData(queryUrl, selection).then(data => {
       const dataRecord = data.records;
       const tempCategory = dataRecord.forEach(data => {
         console.log(data.fields.Category);

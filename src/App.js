@@ -7,6 +7,8 @@ import { SentenceOutput } from "./components/sentenceOutput";
 
 function App() {
   const [name, setName] = React.useState("");
+  const [selection, setSelection] = React.useState("Truth");
+
   return (
     <div className="App">
       <header className="header"></header>
@@ -21,14 +23,14 @@ function App() {
       ) : (
         <div>
           <section className="checkbox">
-            <TruthOrDare />
+            {<TruthOrDare selection={selection} setSelection={setSelection} />}
           </section>
           <section className="nameOutput">
             <h2>And the winner is...</h2>
             {<NameOutput name={name} />}
           </section>
           <section className="sentenceOutput">
-            <SentenceOutput />
+            {<SentenceOutput selection={selection} />}
           </section>
           <section className="nextButton">{/* <NextButton */}</section>
         </div>
