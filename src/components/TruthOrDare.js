@@ -1,11 +1,10 @@
 import React from "react";
 // here we going to have check box
 
-const TruthOrDare = () => {
-  const [selection, setSelection] = React.useState("Truth");
+const TruthOrDare = ({ selection, setSelection }) => {
   const handleChange = event => {
     setSelection(event.target.value);
-    console.log(selection);
+    console.log("selection in truthordarefile", selection);
   };
   return (
     <div>
