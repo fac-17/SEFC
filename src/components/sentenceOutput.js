@@ -16,23 +16,21 @@ const SentenceOutput = selection => {
 
       const sentenceArray = [];
       const filterIfMatch = data => {
-        console.log("inside filterIF match");
         const apiCat = data.fields.Question;
         if (data.fields.Category === selection.selection) {
-          console.log(typeof apiCat);
           sentenceArray.push(apiCat);
           return apiCat;
         }
       };
-      const tempCategory = dataRecord.filter(filterIfMatch);
-      console.log("array", sentenceArray);
-      // return data.fields.category === selection;
-      //   console.log(data.fields);
-      //   console.log(data.fields.Category);
-      //   console.log(selection.selection);
-      //   console.log(data.fields.Category === selection.selection);
-      // const filter = tempCategory.filter(cat => cat ? 'truth' : 'dare')
-      // console.log(filter)
+
+      const findRandomQuestion = () => {
+        const randomIndex = Math.floor(Math.random() * sentenceArray.length);
+        const randomElement = sentenceArray[randomIndex];
+        console.log("randomQuestion", randomElement);
+      };
+
+      dataRecord.filter(filterIfMatch);
+      findRandomQuestion();
     });
   });
 
