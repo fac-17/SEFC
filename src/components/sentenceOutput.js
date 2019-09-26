@@ -11,7 +11,6 @@ const SentenceOutput = selection => {
 
   const handleButtonClick = () => {
     setNextButtonClicked(prevCount => prevCount + 1);
-    console.log(nextButtonClicked);
   };
 
   // send in selected category and then show a random sentence
@@ -32,7 +31,6 @@ const SentenceOutput = selection => {
       const findRandomQuestion = () => {
         const randomIndex = Math.floor(Math.random() * sentenceArray.length);
         const randomElement = sentenceArray[randomIndex];
-        console.log("randomQuestion", randomElement);
         setSentence(randomElement);
       };
 
@@ -41,22 +39,11 @@ const SentenceOutput = selection => {
     });
   }, [nextButtonClicked || selection]);
 
-  // show next question upon next button click
-
-  //   React.useEffect(() => {
-  //     const nextButton = document.getElementsByClassName("nextButton");
-  //     console.log("nextButton", nextButton);
-  //     if (nextButton) {
-  //       nextButton.addEventListener("click", console.log("worked"));
-  //     }
-  //     // return () => window.removeEventListener("click", handleButtonClick);
-  //   }, []);
-
   return (
     <div>
       <p>{sentence}</p>
       <button onClick={handleButtonClick} className="nextButton">
-        Next
+        Next Truth or Dare
       </button>
     </div>
   );
