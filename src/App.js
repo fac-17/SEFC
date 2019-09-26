@@ -11,12 +11,14 @@ function App() {
 
   return (
     <div className="App">
-      <header className="header"></header>
+      <header className="header">
+      <h2>Truth<br />or<br />Dare</h2>
+      </header>
       {!name ? (
         <div>
           <section className="nameInput">
-            <h2>Welcome to Truth or Dare</h2>
-            <p>Enter the players names below</p>
+            <h3>Enter all<br />players names<br /></h3>
+            <p>seperated by a comma</p>
             {<NameInput name={name} setName={setName} />}
           </section>
         </div>

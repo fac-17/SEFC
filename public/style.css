@@ -1,3 +1,25 @@
-body{
-  background-color: aqua;
+html{
+  background-color: black;
+}
+
+/* h1, h2, h3, p{
+  color: white;
+} */
+
+/* .App{
+  background-color: red;
+}
+.App-header{
+  background-color: yellow;
+}
+
+.App-nameInput{
+  color:green;
+} */
+
+.App{
+  border-color: red;
+}
+.App-header{
+  background-color: yellow;
 }

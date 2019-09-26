@@ -1,22 +1,36 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  color: blue;
+  /* background-color: red; */
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.header h2 {
   color: white;
+  font-family: Plexifont BV,monospace;
+  font-size: 3em;
+  margin-left:0.5em;
 }
 
-.App-link {
-  color: #09d3ac;
+.nameInput{
+  color:white;
+}
+
+.nameInput h3 {
+font-family: Lovelo, monospace;
+font-size: 2em;
+line-height: 1.2em;
+}
+
+.nameInput p {
+font-family: Lovelo, monospace;
+font-size: 0.9em;
+}
+
+.nameOutput{
+  color: white;
+  font-family: Lovelo, monospace;
+}
+.nameOutput h1 {
+  color:red;
+  font-family: Lovelo, monospace;
 }
