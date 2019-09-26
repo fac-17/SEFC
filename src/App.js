@@ -5,8 +5,6 @@ import { TruthOrDare } from "./components/TruthOrDare";
 
 function App() {
   const [name, setName] = React.useState("");
-  const airtableToken = process.env.REACT_APP_AIRTABLE_API_KEY;
-  const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
 
   return (
     <div className="App">
