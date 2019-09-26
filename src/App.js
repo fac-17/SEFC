@@ -3,7 +3,6 @@ import "./App.css";
 import { NameInput } from "./components/nameInput";
 import { NameOutput } from "./components/nameOutput";
 import { TruthOrDare } from "./components/TruthOrDare";
-import { FetchData } from "./utils/fetchData";
 import { SentenceOutput } from "./components/sentenceOutput";
 
 function App() {
