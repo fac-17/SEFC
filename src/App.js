@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
 import { NameInput } from "./components/nameInput";
+import { NameOutput } from "./components/nameOutput";
 import { TruthOrDare } from "./components/TruthOrDare";
 
 function App() {
   const [name, setName] = React.useState("");
-
   return (
     <div className="App">
       <header className="header"></header>
@@ -22,10 +22,13 @@ function App() {
           <section className="checkbox">
             <TruthOrDare />
           </section>
+          <section className="nameOutput">
+            <h2>And the winner is...</h2>
+            {<NameOutput name={name} />}
+          </section>
           <section className="sentenceOutput">
             {/* <SentenceOutput /> */}
           </section>
-          <section className="nameOutput">{/* <NameOutput /> */}</section>
           <section className="nextButton">{/* <NextButton */}</section>
         </div>
       )}
