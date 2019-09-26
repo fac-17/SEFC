@@ -4,7 +4,6 @@ import React from "react";
 const TruthOrDare = ({ selection, setSelection }) => {
   const handleChange = event => {
     setSelection(event.target.value);
-    console.log("selection in truthordarefile", selection);
   };
   return (
     <div>

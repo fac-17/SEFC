@@ -39,7 +39,7 @@ function App() {
             {<TruthOrDare selection={selection} setSelection={setSelection} />}
           </section>
           <section className="nameOutput">
-            <h2>And the winner is...</h2>
+            <h2>It's your turn:</h2>
             {<NameOutput name={name} />}
           </section>
           <section className="sentenceOutput">
