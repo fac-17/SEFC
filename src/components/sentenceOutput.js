@@ -14,15 +14,18 @@ const SentenceOutput = selection => {
     FetchData(queryUrl, selection).then(data => {
       const dataRecord = data.records;
 
+      const sentenceArray = [];
       const filterIfMatch = data => {
         console.log("inside filterIF match");
         const apiCat = data.fields.Question;
         if (data.fields.Category === selection.selection) {
-          console.log(apiCat);
+          console.log(typeof apiCat);
+          sentenceArray.push(apiCat);
           return apiCat;
         }
       };
       const tempCategory = dataRecord.filter(filterIfMatch);
+      console.log("array", sentenceArray);
       // return data.fields.category === selection;
       //   console.log(data.fields);
       //   console.log(data.fields.Category);
