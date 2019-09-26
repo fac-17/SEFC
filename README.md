@@ -1,6 +1,8 @@
 
 # The Flamboyant Bottle
 
+App has been deployed on Netlify: https://flamboyant-wheel.netlify.com/
+
 Project Team:
 
 [Christine](https://github.com/xIrusux)
@@ -28,6 +30,11 @@ Components were created for:
 2. Truth or Dare radio buttons
 3. Randomly generated player name output
 4. Randomly generated truth or dare based upon each player's selection 
+
+## Design
+Figma was used to create our design:
+
+<iframe style="border: none;" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F1uaCooxAOh8rb0ZukqzijD%2FUntitled%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
