@@ -5,8 +5,8 @@ const checkResponse = response => {
     console.log(`Error with the request! ${response.status}`);
     return;
   }
-  console.log(response.json());
-  return response.json();
+  console.log(response);
+  return response;
 };
 
 const FetchData = queryUrl => {
