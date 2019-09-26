@@ -5,29 +5,32 @@ import { TruthOrDare } from "./components/TruthOrDare";
 
 function App() {
   const [name, setName] = React.useState("");
+  const airtableToken = process.env.REACT_APP_AIRTABLE_API_KEY;
+  const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
 
   return (
     <div className="App">
       <header className="header"></header>
-      {!name ?(
+      {!name ? (
         <div>
-      <section className="nameInput">
-        <h2>Welcome to Truth or Dare</h2>
-        <p>Enter the players names below</p>
-        {<NameInput name = {name}
-        setName = {setName}/>}
-      </section>
-      </div>
-    ):(
-      <div>
-      <section className="checkbox">
-        <TruthOrDare />
-      </section>
-      <section className="sentenceOutput">{/* <SentenceOutput /> */}</section>
-      <section className="nameOutput">{/* <NameOutput /> */}</section>
-      <section className="nextButton">{/* <NextButton */}</section>
-      </div>
-    )}
+          <section className="nameInput">
+            <h2>Welcome to Truth or Dare</h2>
+            <p>Enter the players names below</p>
+            {<NameInput name={name} setName={setName} />}
+          </section>
+        </div>
+      ) : (
+        <div>
+          <section className="checkbox">
+            <TruthOrDare />
+          </section>
+          <section className="sentenceOutput">
+            {/* <SentenceOutput /> */}
+          </section>
+          <section className="nameOutput">{/* <NameOutput /> */}</section>
+          <section className="nextButton">{/* <NextButton */}</section>
+        </div>
+      )}
     </div>
   );
 }
