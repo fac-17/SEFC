@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Lovelo Black', monospace;
+  src: url('Lovelo Black.otf');
+}
+
+@font-face {
+  font-family: 'plexifont', monospace;
+  src: url('plexifont.ttf');
+}
+
 .App {
 }
 

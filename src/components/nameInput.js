@@ -22,7 +22,7 @@ const NameInput = ({ name, setName }) => {
         }}
       >
         <input
-          class="enterName"
+          className="enterName"
           type="text"
           required
           value={tempName}
