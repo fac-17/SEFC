@@ -10,16 +10,20 @@ const NameOutput = ({ name }) => {
     const randomIndex = Math.floor(Math.random() * oneName.length);
     const randomName = oneName[randomIndex];
     setRandomElement(randomName);
-  }, []);
+  }, [randomElement]);
 
-  // const handleClick = () => {
-  //   setRandomElement()
+  const handleClick = () => {
+    setRandomElement(e => e + "a");
+  };
 
   return (
     <div>
       <h1>{randomElement}</h1>
-      <button className="shake">Next Player</button>
+      <button onClick={handleClick} className="shake">
+        Next Player
+      </button>
     </div>
   );
 };
+
 export { NameOutput };
