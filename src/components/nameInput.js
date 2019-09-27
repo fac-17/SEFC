@@ -30,7 +30,7 @@ const NameInput = ({ name, setName }) => {
             setTempName(event.target.value);
           }}
         />
-        <br></br>
+        <br />
         <button className="nameInputSubmit" type="Submit">
           Submit
         </button>
