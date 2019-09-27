@@ -38,7 +38,7 @@ const SentenceOutput = selection => {
       dataRecord.filter(filterIfMatch);
       findRandomQuestion();
     });
-  }, [nextButtonClicked || selection]);
+  }, [nextButtonClicked, selection]);
 
   return (
       <section className="sentenceOutput">
