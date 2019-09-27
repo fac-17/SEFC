@@ -1,5 +1,6 @@
 import React from "react";
 import { FetchData } from "../utils/fetchData";
+import "./sentenceOutput.css";
 // output the sentence from the airtable database
 
 const SentenceOutput = selection => {

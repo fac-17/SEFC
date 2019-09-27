@@ -13,11 +13,7 @@ function App() {
     <div className="App">
       <header className="header">
         <h2>
-          Truth
-          <br />
-          or
-          <br />
-          Dare
+          Truth<br />or<br />Dare
         </h2>
       </header>
       {!name ? (

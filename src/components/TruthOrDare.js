@@ -1,4 +1,5 @@
 import React from "react";
+import "./truthOrDare.css";
 // here we going to have check box
 
 const TruthOrDare = ({ selection, setSelection }) => {
