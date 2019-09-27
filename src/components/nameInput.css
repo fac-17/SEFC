@@ -1,13 +1,44 @@
-.nameInput{
-  color:white;
+.nameInput {
+  color: white;
+  text-align: center;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
 }
 .nameInput h3 {
-font-family: Lovelo, monospace;
-font-size: 2em;
-line-height: 1.2em;
+  font-family: Lovelo, monospace;
+  font-size: 2em;
+  line-height: 1.2em;
+  margin: auto;
+  text-align: center;
 }
 
 .nameInput p {
-font-family: Lovelo, monospace;
-font-size: 0.9em;
+  font-family: Lovelo, monospace;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.nameInputSubmit {
+  width: 140px;
+  height: 40px;
+  margin: 20px;
+  background: #ffffff;
+  border-radius: 20px;
+  font-family: Lovelo, monospace;
+  font-size: 1em;
+}
+
+.enterName {
+  width: 30%;
+  height: 100px;
+  left: 64px;
+  top: 400px;
+  border-color: white;
+  background-color: black;
+  border-radius: 50px;
+  font-size: 0.9em;
+  font-family: Lovelo, monospace;
+  color: white;
 }
