@@ -6,9 +6,6 @@ import "./sentenceOutput.css";
 const SentenceOutput = selection => {
   const [sentence, setSentence] = React.useState("");
   const [nextButtonClicked, setNextButtonClicked] = React.useState(0);
-  const airtableToken = process.env.REACT_APP_AIRTABLE_API_KEY;
-  const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
-  const queryUrl = `https://api.airtable.com/v0/${airtableBase}/Table%201?api_key=${airtableToken}`;
 
   const handleButtonClick = () => {
     setNextButtonClicked(prevCount => prevCount + 1);
@@ -17,6 +14,9 @@ const SentenceOutput = selection => {
   // send in selected category and then show a random sentence
 
   React.useEffect(() => {
+    const airtableToken = process.env.REACT_APP_AIRTABLE_API_KEY;
+    const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
+    const queryUrl = `https://api.airtable.com/v0/${airtableBase}/Table%201?api_key=${airtableToken}`;
     FetchData(queryUrl, selection).then(data => {
       const dataRecord = data.records;
 
@@ -38,10 +38,10 @@ const SentenceOutput = selection => {
       dataRecord.filter(filterIfMatch);
       findRandomQuestion();
     });
-  }, [nextButtonClicked || selection]);
+  }, [nextButtonClicked, selection]);
 
   return (
-      <section className="sentenceOutput">
+    <section className="sentenceOutput">
       <p>{sentence}</p>
       <button onClick={handleButtonClick} className="nextButton">
         Next Truth or Dare
