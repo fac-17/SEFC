@@ -7,10 +7,13 @@ const NameOutput = ({ name }) => {
   const randomElement = oneName[randomIndex];
 
   return (
-    <div>
+
+    <section className="nameOutput">
+      <h2>It's your turn:</h2>
       <h1>{randomElement}</h1>
       <button className="shake">Next Player</button>
-    </div>
+      </section>
+
   );
 };
 export { NameOutput };

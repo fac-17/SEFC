@@ -40,12 +40,12 @@ const SentenceOutput = selection => {
   }, [nextButtonClicked || selection]);
 
   return (
-    <div>
+      <section className="sentenceOutput">
       <p>{sentence}</p>
       <button onClick={handleButtonClick} className="nextButton">
         Next Truth or Dare
       </button>
-    </div>
+    </section>
   );
 };
 
