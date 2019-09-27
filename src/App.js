@@ -13,11 +13,7 @@ function App() {
     <div className="App">
       <header className="header">
         <h2>
-          Truth
-          <br />
-          or
-          <br />
-          Dare
+          Truth<br />or<br />Dare
         </h2>
       </header>
       {!name ? (
@@ -26,16 +22,9 @@ function App() {
         </div>
       ) : (
         <div>
-          <section className="checkbox">
             {<TruthOrDare selection={selection} setSelection={setSelection} />}
-          </section>
-          <section className="nameOutput">
-            <h2>It's your turn:</h2>
             {<NameOutput name={name} />}
-          </section>
-          <section className="sentenceOutput">
             {<SentenceOutput selection={selection} />}
-          </section>
         </div>
       )}
     </div>
