@@ -13,38 +13,18 @@ function App() {
     <div className="App">
       <header className="header">
         <h2>
-          Truth
-          <br />
-          or
-          <br />
-          Dare
+          Truth<br />or<br />Dare
         </h2>
       </header>
       {!name ? (
         <div>
-          <section className="nameInput">
-            <h3>
-              Enter all
-              <br />
-              players names
-              <br />
-            </h3>
-            <p>seperated by a comma</p>
             {<NameInput name={name} setName={setName} />}
-          </section>
         </div>
       ) : (
         <div>
-          <section className="checkbox">
             {<TruthOrDare selection={selection} setSelection={setSelection} />}
-          </section>
-          <section className="nameOutput">
-            <h2>It's your turn:</h2>
             {<NameOutput name={name} />}
-          </section>
-          <section className="sentenceOutput">
             {<SentenceOutput selection={selection} />}
-          </section>
         </div>
       )}
     </div>

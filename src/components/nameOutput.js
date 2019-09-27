@@ -1,5 +1,6 @@
 // the random selected name
 import React from "react";
+import "./nameOutput.css";
 
 const NameOutput = ({ name }) => {
   const [randomElement, setRandomElement] = React.useState("");
@@ -17,12 +18,13 @@ const NameOutput = ({ name }) => {
   };
 
   return (
-    <div>
+    <section className="nameOutput">
+      <h2>It's your turn:</h2>
       <h1>{randomElement}</h1>
       <button onClick={handleClick} className="shake">
         Next Player
       </button>
-    </div>
+    </section>
   );
 };
 

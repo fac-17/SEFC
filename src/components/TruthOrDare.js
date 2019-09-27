@@ -1,4 +1,5 @@
 import React from "react";
+import "./truthOrDare.css";
 // here we going to have check box
 
 const TruthOrDare = ({ selection, setSelection }) => {
@@ -6,7 +7,7 @@ const TruthOrDare = ({ selection, setSelection }) => {
     setSelection(event.target.value);
   };
   return (
-    <div>
+    <section className="checkbox">
       <label htmlFor="Truth">
         Truth
         <input
@@ -29,7 +30,7 @@ const TruthOrDare = ({ selection, setSelection }) => {
           onChange={handleChange}
         />
       </label>
-    </div>
+    </section>
   );
 };
 
