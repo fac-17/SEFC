@@ -1,10 +1,24 @@
 .checkbox{
-  background-color: green;
+  /* background-color: green; */
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-.truthCheckbox{
+.bothCheckbox{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 width: 29px;
 height: 30px;
 left: 242px;
 top: 400px;
+}
+
+.checkbox label{
+padding: 2em;
+  font-family: Lovelo, monospace;
+  font-size: 0.9em;
+  color: white;
 }

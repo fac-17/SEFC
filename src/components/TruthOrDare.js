@@ -7,10 +7,10 @@ const TruthOrDare = ({ selection, setSelection }) => {
     setSelection(event.target.value);
   };
   return (
-    <section className="checkbox">
+    <div className="checkbox">
       <label htmlFor="Truth">
         Truth
-        <input className="truthCheckbox"
+        <input className="bothCheckbox"
           id="Truth"
           type="radio"
           name="truthordare"
@@ -21,7 +21,7 @@ const TruthOrDare = ({ selection, setSelection }) => {
       </label>
       <label htmlFor="Dare">
         Dare
-        <input
+        <input className="bothCheckbox"
           id="Dare"
           type="radio"
           name="truthordare"
@@ -30,7 +30,7 @@ const TruthOrDare = ({ selection, setSelection }) => {
           onChange={handleChange}
         />
       </label>
-    </section>
+    </div>
   );
 };
 

@@ -1,4 +1,32 @@
+.sentenceOutput{
+  color: white;
+  font-family: Lovelo, monospace;
+  display: block;
+  text-align: center;
+}
+
 .sentenceOutput p{
   font-family: Lovelo, monospace;
-  font-size: 0.9em;
+  text-align: center;
+  color: orange;
+  font-size: 1em;
+  padding-left:4em;
+  padding-right:4em;
+  padding-top:2em;
+  padding-bottom:2em;
+}
+
+.nextButton{
+  color: black;
+  text-align: center;
+  width: 13em;
+  height: 3em;
+  background: #FFFFFF;
+  border-radius: 20px;
+  font-family: Lovelo, monospace;
+}
+
+.nextButton:hover{
+  color: white;
+  background-color: black;
 }

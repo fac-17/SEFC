@@ -9,9 +9,9 @@ const NameOutput = ({ name }) => {
 
   return (
     <section className="nameOutput">
-      <h2>It's your turn:</h2>
-      <h1>{randomElement}</h1>
-      <button className="shake">Next Player</button>
+      <h1 className="nameOutputh1">{randomElement}</h1>
+      <h3 className="nameOutputh3">It's your turn to play!</h3>
+      <button className="outputButton">Next Player</button>
       </section>
 
   );
