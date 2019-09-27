@@ -3,9 +3,11 @@ html{
 }
 
 @font-face {
-font-family: 'Lovelo', monospace;
-src: url('lovelo-black.eot') format('embedded-opentype'),
-     url('lovelo-black.woff') format('woff'),
-     url('lovelo-black.ttf')  format('truetype'),
-     url('lovelo-black.svg') format('svg');
+  font-family: 'Lovelo Black', monospace;
+  src: url('Lovelo Black.otf');
+}
+
+@font-face {
+  font-family: 'plexifont', monospace;
+  src: url('plexifont.ttf');
 }
