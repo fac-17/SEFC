@@ -10,7 +10,7 @@ const TruthOrDare = ({ selection, setSelection }) => {
     <section className="checkbox">
       <label htmlFor="Truth">
         Truth
-        <input
+        <input className="truthCheckbox"
           id="Truth"
           type="radio"
           name="truthordare"

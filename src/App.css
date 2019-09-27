@@ -1,12 +1,9 @@
 .App {
-  /* text-align: center; */
-  color: blue;
-  /* background-color: red; */
 }
 
-.header h2 {
+.logo {
   color: white;
-  font-family: Plexifont BV,monospace;
+  font-family: Plexifont BV, monospace;
   font-size: 3em;
   margin-left:0.5em;
 }

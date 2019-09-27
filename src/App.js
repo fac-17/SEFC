@@ -11,10 +11,10 @@ function App() {
 
   return (
     <div className="App">
-      <header className="header">
-        <h2>
+      <header className="logo">
+        <div>
           Truth<br />or<br />Dare
-        </h2>
+        </div>
       </header>
       {!name ? (
         <div>
