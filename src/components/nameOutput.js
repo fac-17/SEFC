@@ -11,7 +11,7 @@ const NameOutput = ({ name }) => {
     const randomIndex = Math.floor(Math.random() * oneName.length);
     const randomName = oneName[randomIndex];
     setRandomElement(randomName);
-  }, [click]);
+  }, [click, name]);
 
   const handleClick = () => {
     setClick(e => e + 1);

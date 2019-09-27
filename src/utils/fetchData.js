@@ -11,7 +11,6 @@ const checkResponse = response => {
 // based on the selected category filter the api call results accordingly and then select a random sentence
 
 const FetchData = (queryUrl, category) => {
-  const newCategory = category.selection;
   return fetch(queryUrl)
     .then(checkResponse)
     .catch(err => {
