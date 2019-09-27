@@ -22,16 +22,7 @@ function App() {
       </header>
       {!name ? (
         <div>
-          <section className="nameInput">
-            <h3>
-              Enter all
-              <br />
-              players names
-              <br />
-            </h3>
-            <p>seperated by a comma</p>
             {<NameInput name={name} setName={setName} />}
-          </section>
         </div>
       ) : (
         <div>
