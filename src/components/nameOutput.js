@@ -18,12 +18,12 @@ const NameOutput = ({ name }) => {
   };
 
   return (
-    <div>
-      <h1>{randomElement}</h1>
-      <button onClick={handleClick} className="shake">
-        Next Player
-      </button>
-    </div>
+    <section className="nameOutput">
+      <h1 className="nameOutputh1">{randomElement}</h1>
+      <h3 className="nameOutputh3">It's your turn to play!</h3>
+      <button className="outputButton">Next Player</button>
+      </section>
+
   );
 };
 
