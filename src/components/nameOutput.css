@@ -1,30 +1,30 @@
-.nameOutput{
+.nameOutput {
   color: white;
   font-family: Lovelo, monospace;
   display: block;
   text-align: center;
 }
 
-.nameOutputh1{
+.nameOutputh1 {
   color: orange;
   font-size: 3em;
 }
 
-.nameOutputh3{
+.nameOutputh3 {
   color: white;
 }
 
-.outputButton{
+.outputButton {
   color: black;
-    font-family: Lovelo, monospace;
+  font-family: Lovelo, monospace;
   text-align: center;
   width: 8em;
   height: 3em;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 20px;
 }
 
-.outputButton:hover{
+.outputButton:hover {
   color: white;
   background-color: black;
 }

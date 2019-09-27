@@ -8,9 +8,12 @@ const NameInput = ({ name, setName }) => {
   return (
     <section className="nameInput">
       <h3>
-        Enter all<br />players names<br />
+        Enter all
+        <br />
+        players names
+        <br />
       </h3>
-      <p>seperated by a comma</p>
+      <p>SEPERATED BY A COMMA</p>
       <form
         className="nameInput"
         onSubmit={event => {
@@ -19,6 +22,7 @@ const NameInput = ({ name, setName }) => {
         }}
       >
         <input
+          class="enterName"
           type="text"
           required
           value={tempName}
@@ -26,6 +30,7 @@ const NameInput = ({ name, setName }) => {
             setTempName(event.target.value);
           }}
         />
+        <br />
         <button className="nameInputSubmit" type="Submit">
           Submit
         </button>
