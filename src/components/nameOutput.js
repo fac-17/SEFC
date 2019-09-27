@@ -10,10 +10,10 @@ const NameOutput = ({ name }) => {
     const randomIndex = Math.floor(Math.random() * oneName.length);
     const randomName = oneName[randomIndex];
     setRandomElement(randomName);
-  }, [randomElement]);
+  }, [click]);
 
   const handleClick = () => {
-    setRandomElement(e => e + "a");
+    setClick(e => e + 1);
   };
 
   return (
