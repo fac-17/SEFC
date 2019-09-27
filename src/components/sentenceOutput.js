@@ -4,9 +4,14 @@ import { FetchData } from "../utils/fetchData";
 
 const SentenceOutput = selection => {
   const [sentence, setSentence] = React.useState("");
+  const [nextButtonClicked, setNextButtonClicked] = React.useState(0);
   const airtableToken = process.env.REACT_APP_AIRTABLE_API_KEY;
   const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
   const queryUrl = `https://api.airtable.com/v0/${airtableBase}/Table%201?api_key=${airtableToken}`;
+
+  const handleButtonClick = () => {
+    setNextButtonClicked(prevCount => prevCount + 1);
+  };
 
   // send in selected category and then show a random sentence
 
@@ -14,21 +19,32 @@ const SentenceOutput = selection => {
     FetchData(queryUrl, selection).then(data => {
       const dataRecord = data.records;
 
-      const tempCategory = dataRecord.filter(data => {
-        // return data.fields.category === selection;
-        console.log(data.fields.Category);
-        console.log(selection.selection)
-        console.log(data.fields.Category === selection.selection)
-      // const filter = tempCategory.filter(cat => cat ? 'truth' : 'dare')
-      // console.log(filter)
+      const sentenceArray = [];
+      const filterIfMatch = data => {
+        const apiCat = data.fields.Question;
+        if (data.fields.Category === selection.selection) {
+          sentenceArray.push(apiCat);
+          return apiCat;
+        }
+      };
 
-      });
+      const findRandomQuestion = () => {
+        const randomIndex = Math.floor(Math.random() * sentenceArray.length);
+        const randomElement = sentenceArray[randomIndex];
+        setSentence(randomElement);
+      };
+
+      dataRecord.filter(filterIfMatch);
+      findRandomQuestion();
     });
-  });
+  }, [nextButtonClicked || selection]);
 
   return (
     <div>
       <p>{sentence}</p>
+      <button onClick={handleButtonClick} className="nextButton">
+        Next Truth or Dare
+      </button>
     </div>
   );
 };

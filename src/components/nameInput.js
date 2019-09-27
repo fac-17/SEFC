@@ -2,28 +2,27 @@
 // At the beggining of the game
 import React from "react";
 
-const NameInput = ({name, setName}) => {
+const NameInput = ({ name, setName }) => {
   const [tempName, setTempName] = React.useState("");
   return (
-    <form className="nameInput"
-    onSubmit = {(event) => {
-      event.preventDefault();
-      setName(tempName);
-      console.log(tempName)
-    }}
-    >
-
-    <input
-      type="text"
-      value={tempName}
-      onChange={event => {
-        setTempName(event.target.value);
-
-        console.log(tempName);
+    <form
+      className="nameInput"
+      onSubmit={event => {
+        event.preventDefault();
+        setName(tempName);
       }}
-    />
+    >
+      <input
+        type="text"
+        value={tempName}
+        onChange={event => {
+          setTempName(event.target.value);
+        }}
+      />
 
-    <button className="nameInputSubmit" type="Submit">Submit</button>
+      <button className="nameInputSubmit" type="Submit">
+        Submit
+      </button>
     </form>
   );
 };
